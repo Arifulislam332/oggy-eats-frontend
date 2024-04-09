@@ -1,7 +1,7 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import { Nunito } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 const nunito = Nunito({ subsets: ["latin"] });
 
@@ -16,7 +16,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body className={nunito.className}>
         <main className="flex flex-col min-h-screen">
           <Header />
-          <div className="container mx-auto flex-1 py-10">{children}</div>
+          <div className="flex-1">{children}</div>
         </main>
         <Footer />
       </body>
