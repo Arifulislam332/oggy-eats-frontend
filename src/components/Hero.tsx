@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import Overlay from "./Overlay";
 import Link from "next/link";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Overlay from "./Overlay";
 import { Button } from "./ui/button";
 
 export const slides = [
@@ -53,7 +53,7 @@ const Hero = () => {
                   delicious meals delivered straight to your doorstep. Elevate
                   your dining experience today!"
                 </p>
-                <Link href="/get-started">
+                <Link href="/#get_started">
                   <Button size="lg" className="md:text-xl bg-pink-500">
                     Get Started
                   </Button>
