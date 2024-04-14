@@ -1,15 +1,18 @@
+"use client";
+
+import { useAuth0 } from "@auth0/auth0-react";
 import { Menu } from "lucide-react";
+import { Button } from "./ui/button";
 import {
   Sheet,
   SheetContent,
   SheetDescription,
-  SheetHeader,
   SheetTitle,
-  SheetTrigger,
+  SheetTrigger
 } from "./ui/sheet";
-import { Button } from "./ui/button";
 
 const MobileNav = () => {
+  const { loginWithRedirect } = useAuth0();
   return (
     <Sheet>
       <SheetTrigger>
@@ -18,7 +21,12 @@ const MobileNav = () => {
       <SheetContent className="space-y-5">
         <SheetTitle>Navigation</SheetTitle>
         <SheetDescription className="flex">
-          <Button className="font-bold flex-1 bg-pink-500">Log in</Button>
+          <Button
+            onClick={async () => loginWithRedirect()}
+            className="font-bold flex-1 bg-pink-500"
+          >
+            Log in
+          </Button>
         </SheetDescription>
       </SheetContent>
     </Sheet>
